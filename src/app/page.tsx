@@ -3,6 +3,7 @@ import Header from './components/Header'
 import BannerMain from './components/BannerMain'
 import SliderCards from './components/SliderCards'
 import SliderProducts from './components/SliderProducts'
+import Footer from './components/Footer'
 
 import Image from 'next/image'
 import s from './page.module.scss'
@@ -84,6 +85,8 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
+
+      <Footer />
 		</main>
 	)
 }
