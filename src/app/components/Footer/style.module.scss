@@ -1,0 +1,102 @@
+@import '../../styles/utilities.scss';
+
+.footer__main {
+	.footer {
+		&__wrapper {
+			display: flex;
+			justify-content: space-between;
+			max-width: 950px;
+			margin: 40px auto 64px;
+
+      @media screen and (max-width: 767px){
+        flex-direction: column;
+        margin: 40px auto 57px;
+        gap: 25px;
+      }
+		}
+
+		&__menu {
+			display: flex;
+			flex-direction: column;
+			gap: 25px;
+			list-style: none;
+
+			&_title {
+				font-size: $font-size-large;
+				color: $text-base;
+				font-weight: 700;
+				line-height: 18px;
+
+        @media screen and (max-width: 767px){
+          display: flex;
+          justify-content: space-between;
+        }
+
+        &::after {
+          @media screen and (max-width: 767px){
+            content: '+';
+            font-size: $font-size-large;
+            font-weight: 700;
+            line-height: 18px;
+          }
+        }
+			}
+
+			&_item {
+				font-size: $font-size-base;
+				color: $text-dark;
+				cursor: pointer;
+				line-height: 18px;
+
+        @media screen and (max-width: 767px){
+          display: none;
+        }
+
+				&:hover {
+					opacity: 0.8;
+					transition: all 0.2s ease-in-out;
+				}
+			}
+		}
+	}
+}
+
+.footer__bottom {
+	background-color: $bg-dark;
+	padding-top: 24px;
+	padding-bottom: 32px;
+
+	.footer {
+		&__wrapper {
+			display: flex;
+			justify-content: space-between;
+      align-items: center;
+
+      @media screen and (max-width: 767px){
+        flex-direction: column;
+        gap: 36px;
+      }
+		}
+
+		&__left {
+			display: flex;
+			gap: 22px;
+		}
+
+		&__middle {
+			display: flex;
+			gap: 22px;
+		}
+
+		&__right {
+			display: flex;
+			gap: 22px;
+		}
+
+		&__logo_vtex {
+			width: 68px;
+			object-fit: cover;
+			object-position: left;
+		}
+	}
+}
