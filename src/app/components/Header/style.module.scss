@@ -1,0 +1,157 @@
+@import '../../styles/utilities.scss';
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+
+	&__shadow {
+		box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.08);
+	}
+
+	&__top {
+		background-color: $bg-dark;
+		color: $text-white;
+		font-size: $font-size-small;
+		font-weight: 400;
+		line-height: 1.125rem;
+		display: flex;
+		min-height: 1.5rem;
+		justify-content: center;
+
+		@media screen and (max-width: 767px) {
+			font-size: 10px;
+		}
+	}
+
+	&__middle {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		min-height: 88px;
+
+		&_left {
+			@media screen and (max-width: 767px) {
+				display: flex;
+				align-items: center;
+				gap: 20px;
+        margin-left: -10px;
+			}
+		}
+
+		&_center {
+			display: flex;
+			flex-grow: 1;
+			padding: 0 60px;
+		}
+
+		&_right {
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			gap: 8.4px;
+
+      @media screen and (max-width: 767px){
+        gap: 40px;
+        margin-right: -10px;
+      }
+		}
+	}
+
+	&__bottom {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+
+		@media screen and (max-width: 767px) {
+			display: none;
+		}
+
+		.menu {
+			width: 100%;
+
+			ul {
+				display: flex;
+				list-style: none;
+				justify-content: center;
+				gap: 15px;
+			}
+
+			&__item {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 146px;
+				height: 41px;
+				cursor: pointer;
+
+				&:hover {
+					color: $text-orange;
+					transition: all 0.2s ease-in-out;
+				}
+
+				&_bold {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					width: 146px;
+					height: 41px;
+					cursor: pointer;
+					color: $text-orange;
+					font-weight: 700;
+
+					&:hover {
+						color: $text-dark;
+						transition: all 0.2s ease-in-out;
+					}
+				}
+
+				&_icon {
+					margin-right: 8px;
+				}
+			}
+		}
+	}
+
+	.search {
+		display: flex;
+		position: relative;
+		background-color: $bg-light;
+		border-radius: $border-radius-md;
+		padding-right: 120px;
+		width: 100%;
+
+		&__input {
+			width: 100%;
+			height: 40px;
+			padding-left: 24px;
+			background: transparent;
+			border: none;
+			font-size: $font-size-small;
+		}
+
+		&__button {
+			position: absolute;
+			right: 0;
+			height: 40px;
+			width: 119px;
+
+			&_text {
+				font-size: $font-size-base;
+			}
+		}
+	}
+}
+
+.desktop {
+	@media screen and (max-width: 767px) {
+		display: none;
+	}
+}
+
+.mobile {
+	@media screen and (min-width: 768px) {
+		display: none;
+	}
+}

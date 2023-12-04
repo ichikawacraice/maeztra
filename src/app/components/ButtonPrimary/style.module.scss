@@ -1,0 +1,26 @@
+@import '../../styles/utilities.scss';
+
+.btn_primary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: $border-radius-md;
+  background-color: $btn-bg;
+  color: $btn-text;
+  font-size: $font-size-large;
+  font-weight: 400;
+  border: none;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  padding: 14px 30px;
+
+  @media screen and (max-width: 767px){
+    border-radius: $border-radius;
+  }
+
+  &:hover {
+    background-color: $btn-bg-hover;
+    transition: all 0.2s ease-in-out;
+  }
+}

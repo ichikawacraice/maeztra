@@ -1,0 +1,36 @@
+$max-width: calc(1920px - 200px);
+$font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+  'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
+  'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+
+$text-base: #353535;
+$text-dark: #000000;
+$text-white: #ffffff;
+$text-orange: #FAA500;
+
+$bg: #FAFAFA;
+$bg-light: #EFEFEF;
+$bg-dark: #353535;
+$bg-white: #ffffff;
+
+$btn-bg: #FAA500;
+$btn-bg-hover: #FAA500AA;
+$btn-bg-hover-secondary: #FAA500;
+$btn-bg-active: #F8A500;
+$btn-bg-disabled: #bbb;
+$btn-text: #ffffff;
+$btn-text-secondary: #353535;
+
+$btn-border: #FAA500;
+
+$font-size-small: 0.75rem;
+$font-size-base: 0.875rem;
+$font-size-large: 1rem;
+$font-size-xlarge: 1.25rem;
+$font-size-titleh3: 1.5rem;
+$font-size-titleh2: 2rem;
+$font-size-titleh1: 2.5rem;
+$font-size-titleh1-mobile: 1.875rem;
+
+$border-radius: 4px;
+$border-radius-md: 8px;

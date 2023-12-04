@@ -1,0 +1,68 @@
+@import '../../styles/utilities.scss';
+
+.banner__main {
+	background-image: url('/images/banner-main.png');
+	display: flex;
+	height: 600px;
+
+  @media screen and (max-width: 767px){
+    background-image: url('/images/banner-main-mobile.png');
+    height: 320px;
+    background-position: center;
+    background-size: cover;
+  }
+
+	&_content {
+		margin-top: 164px;
+		margin-left: 17%;
+    margin-right: 17%;
+
+    @media screen and (max-width: 767px){
+      margin-top: 63px;
+    }
+	}
+
+	&_title {
+		font-size: $font-size-titleh1;
+		color: $text-white;
+		font-weight: 700;
+		margin-bottom: 40px;
+
+    @media screen and (max-width: 767px){
+      font-size: $font-size-titleh1-mobile;
+      max-width: 223px;
+      margin-bottom: 24px;
+    }
+	}
+
+	&_text {
+		font-size: $font-size-xlarge;
+		color: $text-white;
+		font-weight: 400;
+		max-width: 467px;
+		margin-bottom: 32px;
+
+    @media screen and (max-width: 767px){
+      font-size: $font-size-base;
+      max-width: 100%;
+      margin-bottom: 16px;
+    }
+	}
+
+	&_button {
+		width: fit-content;
+
+		button {
+			font-weight: 700;
+			padding: 15px 33px;
+      font-family: 'Montserrat', sans-serif;
+
+      @media screen and (max-width: 767px){
+        width: 76px;
+        height: 28px;
+        font-size: $font-size-base;
+        border-radius: $border-radius;
+      }
+		}
+	}
+}

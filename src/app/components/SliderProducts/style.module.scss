@@ -1,0 +1,91 @@
+@import '../../styles/variables';
+
+.product__card {
+	max-width: 308px;
+
+	&_info {
+		padding: 3px 27px;
+	}
+
+	&_image {
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&_price {
+		font-weight: 700;
+		margin-bottom: 2px;
+		font-size: $font-size-xlarge;
+	}
+
+	&_title {
+		font-size: $font-size-large;
+		color: $text-dark;
+		margin-bottom: 8px;
+	}
+
+	&_description {
+		font-size: $font-size-small;
+		color: $text-dark;
+		margin-bottom: 8px;
+		opacity: 0.5;
+	}
+
+	&_addtocart {
+		height: 35px;
+	}
+}
+
+.skuselector {
+	display: flex;
+	margin-bottom: 8px;
+	gap: 0.6rem;
+
+	&__item {
+		width: 27px;
+		height: 27px;
+		border-radius: $border-radius;
+		cursor: pointer;
+
+		&:hover {
+			opacity: 0.8;
+			transition: all 0.2s ease-in-out;
+		}
+	}
+}
+
+.orange {
+	background-color: #deac71;
+	border: 1px solid #353535;
+}
+
+.salmon {
+	background-color: #d37163;
+}
+
+.blue {
+	background-color: #6497d3;
+}
+
+.purple {
+	background-color: #3c3b79;
+}
+
+.black {
+	background-color: #1c1a19;
+}
+
+.red {
+	background-color: #d94e4b;
+}
+
+.gray {
+	background-color: #cfc9b1;
+}
+
+.smoke {
+	background-color: #eae9e5;
+}

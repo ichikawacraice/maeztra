@@ -1,95 +1,89 @@
+import React from 'react'
+import Header from './components/Header'
+import BannerMain from './components/BannerMain'
+import SliderCards from './components/SliderCards'
+import SliderProducts from './components/SliderProducts'
+
 import Image from 'next/image'
-import styles from './page.module.css'
+import s from './page.module.scss'
+import ButtomPrimary from './components/ButtonPrimary'
+import SliderParceiras from './components/SliderParceiras'
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+	return (
+		<main className={s.main}>
+			<Header />
+			<BannerMain />
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+			<section className={`${s.services} ${s.container}`}>
+				<h3 className={s.services__title}>Por que comprar na Maeztra?</h3>
+				<div className={s.services__cards}>
+					<SliderCards />
+				</div>
+			</section>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+			<section className={`${s.parceiras} ${s.container}`}>
+				<h2 className={s.parceiras__title}>Marcas Parceiras</h2>
+				<div className={s.parceiras__cards}>
+					<SliderParceiras />
+				</div>
+			</section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+			<section className={`${s.products} ${s.container}`}>
+				<h2 className={s.products__title}>As Mais Pedidas</h2>
+				<div className={s.products__shelf}>
+					<SliderProducts />
+				</div>
+			</section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
+			<section className={`${s.collections} ${s.container}`}>
+				<div className={s.collections__left}>
+					<h3 className={s.collections__title}>Lorem ipsum </h3>
+					<p className={s.collections__description}>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum mauris posuere fusce
+						proin mattis. Hendrerit cras ut nunc enim dictum. Mattis proin ut quis donec sed eget
+						nulla. Vel mi ut mauris integer. Nibh sagittis in lobortis sed cursus condimentum velit
+						pharetra. Amet luctus ut vulputate scelerisque placerat consequat. Neque arcu mi iaculis
+						id. Vel vitae, pharetra, a nec tristique. Feugiat id tortor eu mauris pulvinar velit
+						massa. Ut ornare augue eget convallis volutpat aliquet. Sed sed pellentesque porttitor
+						phasellus donec condimentum sit sapien.
+					</p>
+				</div>
+				<div className={s.collections__right}>
+					<div className={s.collections__image}>
+						<Image
+							className={s.desktop}
+							src='/images/collections.png'
+							alt='Coleção outono-inverno'
+							width={1114}
+							height={480}
+						/>
+						<Image
+							className={s.mobile}
+							src='/images/collections-mobile.png'
+							alt='Coleção outono-inverno'
+							width={308}
+							height={190}
+						/>
+					</div>
+				</div>
+			</section>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+			<section className={s.newsletter}>
+				<div className={s.container}>
+					<div className={s.newsletter__wrapper}>
+						<div className={s.newsletter__title}>
+							<h3 className={s.newsletter__title}>Recebe Nossa Newsletter</h3>
+						</div>
+						<form action='' className={s.newsletter__form}>
+							<input type='email' placeholder='Digite seu e-mail' />
+							<div className={s.newsletter__form_button}>
+								<ButtomPrimary>Enviar</ButtomPrimary>
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+		</main>
+	)
 }
